@@ -19,7 +19,7 @@ const display = Barlow_Condensed({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    basePath ? `https://independence-x.github.io${basePath}/` : "http://localhost:3000",
+    basePath ? `https://independence-x.github.io${basePath}/` : "https://independence-x.com",
   ),
   title: {
     default: `${company.name.toUpperCase()} - HOME`,
