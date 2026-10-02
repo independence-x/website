@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { funders, totals } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export const metadata: Metadata = { title: "Funding" };
 
@@ -26,7 +27,7 @@ export default function FundingPage() {
                 }`}
               >
                 <img
-                  src={funder.image}
+                  src={asset(funder.image)}
                   alt={funder.name}
                   className="max-h-28 w-auto max-w-full object-contain"
                 />

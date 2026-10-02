@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import { asset } from "@/lib/paths";
 
 export function Shot({
   src,
@@ -30,7 +31,7 @@ export function Shot({
         onClick={() => setOpen(true)}
         className="group block w-full overflow-hidden rounded-2xl border border-line bg-ink-2 text-left"
       >
-        <img src={src} alt={alt} className="w-full transition duration-500 group-hover:scale-[1.01]" />
+        <img src={asset(src)} alt={alt} className="w-full transition duration-500 group-hover:scale-[1.01]" />
       </button>
       {caption && <p className="mt-3 text-sm leading-6 text-mist">{caption}</p>}
       {open && (
@@ -45,7 +46,7 @@ export function Shot({
             <p id={titleId} className="sr-only">
               {alt}
             </p>
-            <img src={src} alt={alt} className="max-h-[86vh] w-auto max-w-full rounded-xl" />
+            <img src={asset(src)} alt={alt} className="max-h-[86vh] w-auto max-w-full rounded-xl" />
             <button
               type="button"
               onClick={() => setOpen(false)}

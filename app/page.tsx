@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AutoplayVideo } from "@/components/AutoplayVideo";
+import { asset } from "@/lib/paths";
 import {
   company,
   mercapFeatures,
@@ -76,7 +77,7 @@ export default function HomePage() {
               by {company.name}.
             </p>
             <img
-              src="/media/mercap-brochure.png"
+              src={asset("/media/mercap-brochure.png")}
               alt="MERCAP brochure showing capsule systems, key features, and the launch to touchdown sequence"
               className="mt-8 w-full rounded-3xl border border-line"
             />

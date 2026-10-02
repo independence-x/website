@@ -1,17 +1,12 @@
 import type { NextConfig } from "next";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      { source: "/index.html", destination: "/", permanent: false },
-      { source: "/clients.html", destination: "/clients", permanent: false },
-      { source: "/contact-us.html", destination: "/contact", permanent: false },
-      { source: "/funding.html", destination: "/funding", permanent: false },
-      { source: "/awards.html", destination: "/awards", permanent: false },
-      { source: "/media.html", destination: "/media", permanent: false },
-      { source: "/store.html", destination: "/store", permanent: false },
-    ];
-  },
+  output: "export",
+  trailingSlash: true,
+  images: { unoptimized: true },
+  ...(basePath ? { basePath, assetPrefix: basePath } : {}),
 };
 
 export default nextConfig;

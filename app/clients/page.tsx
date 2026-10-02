@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { clients, totals } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export const metadata: Metadata = { title: "CLIENTS" };
 
@@ -26,7 +27,7 @@ export default function ClientsPage() {
                 }`}
               >
                 <img
-                  src={client.image}
+                  src={asset(client.image)}
                   alt={client.name}
                   className="max-h-24 w-auto max-w-[80%] object-contain"
                 />

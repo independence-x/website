@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { company, nav, offices } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <img src="/media/logo.png" alt="" className="mb-5 h-6 w-auto" />
+          <img src={asset("/media/logo.png")} alt="" className="mb-5 h-6 w-auto" />
           <p className="max-w-sm text-sm leading-6 text-mist">
             {company.descriptor}. {company.tagline}.
           </p>

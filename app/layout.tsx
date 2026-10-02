@@ -3,6 +3,7 @@ import { Barlow_Condensed, Outfit } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { company } from "@/lib/content";
+import { asset, basePath } from "@/lib/paths";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -17,6 +18,9 @@ const display = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    basePath ? `https://independence-x.github.io${basePath}/` : "http://localhost:3000",
+  ),
   title: {
     default: `${company.name.toUpperCase()} - HOME`,
     template: `%s - ${company.name.toUpperCase()}`,
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
     siteName: company.name.toUpperCase(),
     title: company.name.toUpperCase(),
     description: company.tagline,
-    images: ["/media/mercap-brochure.png"],
+    images: [asset("/media/mercap-brochure.png")],
   },
 };
 

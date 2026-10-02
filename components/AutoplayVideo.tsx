@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { asset } from "@/lib/paths";
 
 type AutoplayVideoProps = {
   src: string;
@@ -42,10 +43,10 @@ export function AutoplayVideo({
       loop={loop}
       controls={controls}
       playsInline
-      poster={poster}
+      poster={poster ? asset(poster) : undefined}
       preload="auto"
     >
-      <source src={src} type="video/mp4" />
+      <source src={asset(src)} type="video/mp4" />
     </video>
   );
 }

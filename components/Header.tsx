@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { nav } from "@/lib/content";
+import { asset } from "@/lib/paths";
 
 export function Header() {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5">
         <Link href="/" className="shrink-0" onClick={() => setOpen(false)}>
           <img
-            src="/media/logo.png"
+            src={asset("/media/logo.png")}
             alt="Independence-X Aerospace"
             className="h-7 w-auto"
           />
