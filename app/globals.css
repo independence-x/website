@@ -39,6 +39,10 @@ body {
   text-transform: uppercase;
 }
 
+.map-dark {
+  filter: invert(0.92) hue-rotate(180deg) saturate(0.28) brightness(0.82) contrast(0.95);
+}
+
 .starfield {
   background-image:
     radial-gradient(1px 1px at 12% 22%, rgba(255, 255, 255, 0.7), transparent),

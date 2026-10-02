@@ -39,7 +39,7 @@ export const offices = [
   },
   {
     entity: "PJBUMI Technologies SAS",
-    registration: "",
+    registration: "RCS Toulouse 107 926 883",
     places: [
       {
         name: "French Office 1",
