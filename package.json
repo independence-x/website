@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "shop": "node scripts/store-dev.mjs",
     "build": "next build",
     "start": "next start"
   },

@@ -38,6 +38,8 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          NEXT_PUBLIC_STORE_API_URL: ${{ vars.STORE_API_URL != '' && vars.STORE_API_URL || 'http://shop.independence-x.com/api' }}
+          NEXT_PUBLIC_STORE_ADMIN_URL: ${{ vars.STORE_ADMIN_URL != '' && vars.STORE_ADMIN_URL || 'http://shop.independence-x.com/admin/' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

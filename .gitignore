@@ -5,3 +5,13 @@ out
 archive
 *.log
 *.tsbuildinfo
+.env
+.env.local
+.env*.local
+shop/config.php
+shop/installed.lock
+shop/local/*.db
+shop/local/*.db-*
+shop/uploads/*
+!shop/uploads/.htaccess
+!shop/uploads/.gitkeep
